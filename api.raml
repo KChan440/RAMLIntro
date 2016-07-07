@@ -1,0 +1,25 @@
+#%RAML 0.8
+title: TestAPI
+version: v1
+baseUri: http://api.samplehost.com
+
+/helloWorld:
+  get:
+    responses:
+      200:
+        body:
+          application/json:
+            example: |
+              {
+                "message" : "Hello World"
+              }
+/newtab:
+  get:
+    responses:
+      200:
+        body:
+          application/json:
+            example: |
+              {
+              "name" : "name"
+              }
