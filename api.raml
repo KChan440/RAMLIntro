@@ -28,3 +28,42 @@ documentation:
             "name": "internName",
             "title": "internTitle"
             }
+
+  /{id}:
+    description: A specific intern tracked by id
+    uriParameters:
+      id:
+        description: the `id` of intern.
+        type: number
+        example: 1
+    get:
+      description: Retrieve specified intern
+      responses:
+        200:
+          body:
+            example: |
+              {
+              "id": 2,
+              "name": "Kumaran",
+              "title": "Software Engineer Intern"
+              }
+    patch:
+        description: Update intern information
+        body:
+          example: |
+            {
+            "name": "newName",
+            "title": "newTitle"
+            }
+        responses:
+          200:
+            body:
+              example: |
+                {
+                "name": "Kumaran",
+                "title": "CEO"
+                }
+    delete:
+          description: Remove intern
+          responses:
+            204:
