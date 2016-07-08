@@ -5,7 +5,6 @@ mediaType: application/json
 documentation:
   - title: Overview
     content: My first raml api!!!...
-
 /notes:
   description: Listing notes
   get:
@@ -14,28 +13,14 @@ documentation:
       q:
         description: Search query to filter results
         example: interns
-      responses:
+    responses:
         200:
           body:
             example: |
-              [{ "id": 1, "name": "Kumaran",
-              "title": "Software Engineer intern"},
-              { "id": 2, "name": "KV",
-              "title": "Software Engineer intern"},
-              { "id": 3, "name": "Edson",
-              "title": "Software Engineer intern"},
-              { "id": 4, "name": "Joe",
-              "title": "QA intern"},
-              { "id": 5, "name": "Michael",
-              "title": "QA intern"},
-              { "id": 6, "name": "Macayla",
-              "title": "QA Intern"},
-              { "id": 7, "name": "Griffin",
-              "title": "??? Intern"},
-              ]
-  # post:
-  #   description: Creating a new intern!
-  #   body:
-  #     example: |
-  #       { "name": "newInternName", "title": "newInternTitle"}
-  #     headers:
+              [{ "id": 1, "name": "Kumaran","title": "Software Engineer intern"},
+              { "id": 2, "name": "KV","title": "Software Engineer intern"},
+              { "id": 3, "name": "Edson","title": "Software Engineer intern"},
+              { "id": 4, "name": "Joe","title": "QA intern"},
+              { "id": 5, "name": "Michael", "title": "QA intern"},
+              { "id": 6, "name": "Macayla", "title": "QA Intern"},
+              { "id": 7, "name": "Griffin","title": "??? Intern" }]
