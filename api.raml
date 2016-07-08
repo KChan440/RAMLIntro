@@ -1,25 +1,41 @@
 #%RAML 0.8
-title: TestAPI
-version: v1
-baseUri: http://api.samplehost.com
+title: Example RAML
+version: v2
+mediaType: application/json
+documentation:
+  - title: Overview
+    content: My first raml api!!!...
 
-/helloWorld:
+/notes:
+  description: Listing notes
   get:
-    responses:
-      200:
-        body:
-          application/json:
+    description: Listing notes be a query string.
+    queryParameters:
+      q:
+        description: Search query to filter results
+        example: interns
+      responses:
+        200:
+          body:
             example: |
-              {
-                "message" : "Hello World"
-              }
-/newtab:
-  get:
-    responses:
-      200:
-        body:
-          application/json:
-            example: |
-              {
-              "name" : "name"
-              }
+              [{ "id": 1, "name": "Kumaran",
+              "title": "Software Engineer intern"},
+              { "id": 2, "name": "KV",
+              "title": "Software Engineer intern"},
+              { "id": 3, "name": "Edson",
+              "title": "Software Engineer intern"},
+              { "id": 4, "name": "Joe",
+              "title": "QA intern"},
+              { "id": 5, "name": "Michael",
+              "title": "QA intern"},
+              { "id": 6, "name": "Macayla",
+              "title": "QA Intern"},
+              { "id": 7, "name": "Griffin",
+              "title": "??? Intern"},
+              ]
+  # post:
+  #   description: Creating a new intern!
+  #   body:
+  #     example: |
+  #       { "name": "newInternName", "title": "newInternTitle"}
+  #     headers:
